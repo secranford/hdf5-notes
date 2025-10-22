@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Example on creating a minimal hdf5 file in python
 import h5py
 
 f = h5py.File("file5.hdf5","w") # hdf5 file created
@@ -10,7 +11,3 @@ f = h5py.File("file5.hdf5","w") # hdf5 file created
 dset = f.create_dataset("my dataset", (10,10),dtype='f') # dataset created
 dset[0,0] = 2.1
 f.close()
-
-# dset = f["my dataset"]
-# dset.shape
-# dset.dtype

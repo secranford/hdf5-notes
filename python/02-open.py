@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Example on opening an hdf5 file in python and checking data information
 import h5py
 
 with h5py.File("file5.hdf5","r") as f:

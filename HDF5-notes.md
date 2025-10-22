@@ -3,9 +3,14 @@
 ## The HDF5 Data format
 
 - HDF5: Hierarchical Data Format
-- HDF5 is a binary data format that allows you to handle large datasets. It is a self describing data format meaning it contains metadata describing the data within. It allows you to store multiple data format types together with context and ways to access the data in different ways.
+- HDF5 is a binary data format that allows you to handle large datasets. It is a self describing data format meaning it contains metadata describing the data within and there is no need to write special parsers for the data (i.e. checking headers and character delemiters). It allows you to store multiple data format types together with context and ways to access the data in different ways.
 - Partial I/O. HDF5 supports partial input/output for data, meaning you don't need to load the entire file to memory to be able to extract or write the data that you want. This makes I/O more efficient.
-
+- The hdf5 data format is also platform independent meaning you can create and access the data across different machines and environments. 
+- You can compress hdf5 data, i.e. for archival storage or transfer.
+- The hdf5 data format consists of only three data structures: **Datasets**, **Attributes**, and **Groups**. Datasets are equivalent to multidimensional arrays. Attributes are the key-value metadata information that gets attached to datasets. Groups are containers that function similar to file folders and allow you to group datasets and even other groups together and organize them. 
+- Datasets have a single defined datatype (i.e. 64 bit float) and a prescribed shape (i.e. 2 by 2 array) and can be sliced meaning you can partially access the data within the dataset. There is not a practical size limit to how large a dataset can be. 
+- Attributes are stored with datasets as key-value pairs to help give context to the data they are attached to. This is a large part of what makes the hdf5 format self describing, you don't need separate files or notes to explain what your data is or how it is stored.
+- Groups represent the relationship between your different datasets and allow you to organize multiple datasets of different datatypes all within the same file. The folder like structure provides more context to the data and helps make it self describing.
 ## Resources for learning HDF5
 
 - The official HDF5 Group [website][hdf5] is a good resource to learn more about hdf5 and see available resources or tutorials on handling the data format. Many programming languages such as python, Fortran, and Matlab have a way to handle hdf5 files. The HDF5 Group even has a visual tool for handling the file format, [HDFView][hdfview]. There is also a [browser][myhdf5] application, which can be helpful for exploring the data format.
