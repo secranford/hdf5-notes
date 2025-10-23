@@ -1,0 +1,3 @@
+# ignore all the hdf5 files for now. Can add exceptions later
+*.h5
+*.hdf5
