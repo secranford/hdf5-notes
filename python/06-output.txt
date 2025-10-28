@@ -1,0 +1,8 @@
+File has dataset key: Ones
+> Loading dataset through multiple methods...
+> Done with method 1, moving to method 2
+> Done with method 2, moving to method 3
+
+Method 1 took: 208138.962522964 milliseconds
+Method 2 took: 21.966981003060937 milliseconds
+Method 3 took: 17.784113995730877 milliseconds

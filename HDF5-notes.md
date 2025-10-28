@@ -23,6 +23,7 @@
 ## HDF5 in python
 
 - To handle hdf5 files in python, use the `h5py` library. The best resource for the library are the [html docs][h5py_doc].
+- python is particularly useful for learning hdf5 or as a standalone hdf5 file handler since it is a dynamically typed language and it's hdf5 library interfaces well with python's intrinsically robust datatypes and classes. This makes it easy to play around and learn with. For standalone post processing of hdf5 files, it is also very useful and easy to intuitively generalize functions and classes based on your dataset (i.e. a custom us3d post processor). For internal reading/writing of hdf5 files for use within your scientific codes, it is probably best to use the library specific to the language your code is written in (i.e. Fortran, c++, etc.).
 - [hdf5]: https://www.hdfgroup.org/
   [hdfview]: https://www.hdfgroup.org/download-hdfview/
   [myhdf5]: https://myhdf5.hdfgroup.org/
